@@ -3,6 +3,8 @@
 Aplicación creada con React + Redux Toolkit para buscar usuarios usando la API [JSONPlaceholder](https://jsonplaceholder.typicode.com/).
 
 ## 🌐 Demo en vivo
+![Vista previa](./public/screenshot.png)
+
 
 👉 [Haz clic aquí para ver la app funcionando](https://api-search-placeholder.vercel.app/)
 
@@ -11,7 +13,7 @@ Aplicación creada con React + Redux Toolkit para buscar usuarios usando la API 
 - Buscar por nombre
 - Buscar por ciudad
 - Manejo de carga con `WithLoader`
-- Diseño limpio y responsivo
+- Diseño limpio y responsivo con Hooks
 
 ## ⚙️ Tecnologías usadas
 - React + Vite
