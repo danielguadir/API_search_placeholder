@@ -1,7 +1,7 @@
 // UsersTable.jsx
 import React from "react";
-import "../App.css";
-import "../index.css";
+import "../../App.css";
+import "../../index.css";
 import { useSelector } from "react-redux";
 
 function UsersTable() {
