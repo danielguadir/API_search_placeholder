@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchUserById } from "../../features/users/usersThunks";
-import WithLoader from "../../features/users/WithLoader";
+import WithLoader from "../../components/WithLoader";
 
 function UserDetail() {
   const dispatch = useDispatch();

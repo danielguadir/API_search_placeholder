@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchUsers } from "../../features/users/usersThunks.js";
 import UsersTable from "./UsersTable.jsx"; // ✅ correcto
 
-import WithLoader from "../../features/users/WithLoader.jsx";
+import WithLoader from "../../components/WithLoader.jsx";
 
 function UsersList() {
   const dispatch = useDispatch();

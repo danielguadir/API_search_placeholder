@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
-import WithLoader from "../../features/users/WithLoader";
+import WithLoader from "../../components/WithLoader";
 
 function UserByName() {
   const dispatch = useDispatch();
