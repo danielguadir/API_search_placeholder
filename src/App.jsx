@@ -1,12 +1,12 @@
 // src/App.jsx
-import {  Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 // Importa las vistas principales
 import HomeIntro from "./components/HomeIntro";
-import UsersList from "./features/users//UsersList";
-import UserDetail from "./features/users/UserDetail";
-import UserByName from "./components/UserByName"; // Asegúrate de que este componente exista
-import UserByCity from "./components/UserByCity"; // Asegúrate de que este componente exista
+import UsersList from "./pages/users/UsersList";
+import UserDetail from "./pages/users/UserDetail";
+import UserByName from "./pages/users/UserByName"; // Asegúrate de que este componente exista
+import UserByCity from "./pages/users/UserByCity"; // Asegúrate de que este componente exista
 
 function App() {
   return (

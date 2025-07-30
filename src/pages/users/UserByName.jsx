@@ -1,9 +1,9 @@
-import { fetchUserByName } from "../features/users/usersThunks";
+import { fetchUserByName } from "../../features/users/usersThunks";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
-import WithLoader from "../features/users/WithLoader";
+import WithLoader from "../../features/users/WithLoader";
 
 function UserByName() {
   const dispatch = useDispatch();
@@ -38,10 +38,10 @@ function UserByName() {
 
 export default UserByName;
 // Este componente UserDetailByName.jsx sirve para mostrar
-//  en pantalla la información detallada de un usuario específico, 
+//  en pantalla la información detallada de un usuario específico,
 // según el nombre que se recibe desde la URL. Al cargar el componente,
-//  extrae el nombre usando useParams, y luego ejecuta el thunk fetchUserByName(name) 
-// que obtiene los datos desde una API. Gracias a Redux, el estado user, loading y 
-// error se actualiza automáticamente. El componente también usa WithLoader para 
+//  extrae el nombre usando useParams, y luego ejecuta el thunk fetchUserByName(name)
+// que obtiene los datos desde una API. Gracias a Redux, el estado user, loading y
+// error se actualiza automáticamente. El componente también usa WithLoader para
 // mostrar un mensaje de carga o error si es necesario. Está conectado al slice de
 //  usuarios, que maneja cómo se guardan y actualizan estos datos en el estado global. //

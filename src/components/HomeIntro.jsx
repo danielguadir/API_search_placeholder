@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router-dom"; // src/components/HomeIntro.jsx
 import "../App.css";
 import "../index.css";
-import UserSearchBar from "./UserSearchBar";
-import UserSearchName from "./UserSearchName"; // Asegúrate de que este componente exista
-import UserSearchCity from "./UserSearchCity"; // Asegúrate de que este componente exista
+import UserSearchBar from "../search/UserSearchBar";
+import UserSearchName from "../search/UserSearchName"; // Asegúrate de que este componente exista
+import UserSearchCity from "../search/UserSearchCity"; // Asegúrate de que este componente exista
 
 function HomeIntro() {
   const navigate = useNavigate();

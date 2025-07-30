@@ -1,10 +1,9 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchUsers } from "./usersThunks";
-import UsersTable from "../../components/UsersTable.jsx";  // ✅ correcto
+import { fetchUsers } from "../../features/users/usersThunks.js";
+import UsersTable from "./UsersTable.jsx"; // ✅ correcto
 
-
-import WithLoader from "./WithLoader";
+import WithLoader from "../../features/users/WithLoader.jsx";
 
 function UsersList() {
   const dispatch = useDispatch();
