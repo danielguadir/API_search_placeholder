@@ -1,11 +1,30 @@
-import { useState } from "react";
+
 import { useNavigate } from "react-router-dom";
+import { fetchCities } from "../features/users/usersThunks"; // Asegúrate de que esta función exista
+import { useState, useEffect } from "react";
+
 
 function UserSearchCity() {
   const [userCity, setUserCity] = useState("");
   const [error, setError] = useState(null);
+  const [cities, setCities] = useState([]); // Estado para almacenar las ciudades
   const navigate = useNavigate();
 
+    useEffect(() => {
+    const getCities = async () => {
+      try {
+        const data = await fetchCities(); // aqui uso  la función importada
+        setCities(data);
+      } catch (err) {
+        setError("Error al cargar las ciudades.");
+      }
+    };
+    getCities();
+  }, []);
+
+ 
+
+   //  Buscar ciudad
   const handleSearch = () => {
     if (userCity.trim() === "") {
       setError("Por favor, ingresa una ciudad correcta de usuario.");
@@ -14,20 +33,22 @@ function UserSearchCity() {
     setError(null);
     navigate(`/userbycity/${encodeURIComponent(userCity)}`);
   };
+
+  //  Interfaz de búsqueda
   return (
     <div className="input-container2">
       <select
         className="user-input"
-        placeholder="Ingrese la ciudad del usuario"
         value={userCity}
         onChange={(e) => setUserCity(e.target.value)}
       >
         <option value="">Seleccione una ciudad</option>
-        <option value="Gwenborough">Gwenborough</option>
-        <option value="Wisokyburgh">Wisokyburgh</option>
-        <option value="McKenziehaven">McKenziehaven</option>
-        <option value="South Elvis">South Elvis</option>
-        <option value="Roscoeview">Roscoeview</option>
+
+        {cities.map((city, index) => (
+          <option key={index} value={city}>
+            {city}
+          </option>
+        ))}
       </select>
 
       <button
@@ -49,8 +70,12 @@ function UserSearchCity() {
           <line x1="21" y1="21" x2="16.65" y2="16.65" />
         </svg>
       </button>
+
       {error && <p className="error-message">{error}</p>}
     </div>
   );
 }
+
 export default UserSearchCity;
+
+ 

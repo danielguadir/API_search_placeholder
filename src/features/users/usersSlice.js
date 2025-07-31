@@ -57,7 +57,7 @@ const usersSlice = createSlice({
         state.error = action.payload;
       })
 
-      //Redirige a cargar usuario por nombre
+     
       // Redirige a buscar usuario por nombre
 .addCase(fetchUserByName.pending, (state) => {
   state.user = {};
