@@ -16,6 +16,8 @@ function UsersTable() {
           <th>Email</th>
           <th>Teléfono</th>
           <th>Sitio Web</th>
+
+          <th>ciudad</th>
         </tr>
       </thead>
       <tbody>
@@ -26,6 +28,7 @@ function UsersTable() {
             <td>{user.email}</td>
             <td>{user.phone}</td>
             <td>{user.website}</td>
+            <td>{user.address.city}</td>
           </tr>
         ))}
       </tbody>

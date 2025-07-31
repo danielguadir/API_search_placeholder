@@ -7,7 +7,7 @@ import WithLoader from "../../components/WithLoader";
 
 function UserByCity() {
   const dispatch = useDispatch();
-  const { loading, user, error } = useSelector((state) => state.users);
+  const { loading, users, error } = useSelector((state) => state.users);
   const { city } = useParams(); // 👈 capturamos la ciudad desde la URL
 
   useEffect(() => {
@@ -18,8 +18,8 @@ function UserByCity() {
   return (
     <WithLoader loading={loading} error={error}>
       <div>
-        {Array.isArray(user) ? (
-          user.map((u) => (
+        {Array.isArray(users) ? (
+          users.map((u) => (
             <div key={u.id}>
               <h2>Detalles del Usuario: {u.name}</h2>
               <p>

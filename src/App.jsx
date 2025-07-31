@@ -5,8 +5,8 @@ import { Routes, Route } from "react-router-dom";
 import HomeIntro from "./components/HomeIntro";
 import UsersList from "./pages/users/UsersList";
 import UserDetail from "./pages/users/UserDetail";
-import UserByName from "./pages/users/UserByName"; // Asegúrate de que este componente exista
-import UserByCity from "./pages/users/UserByCity"; // Asegúrate de que este componente exista
+import UserByName from "./pages/users/UserByName"; 
+import UserByCity from "./pages/users/UserByCity"; 
 
 function App() {
   return (
